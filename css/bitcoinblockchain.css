@@ -1,0 +1,69 @@
+/* Bitcoin Blockchain Styles */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.blockchain-data {
+    flex: 2;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blockchain-data h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.block-info,
+.reward-info,
+.fee-info {
+    margin-bottom: 20px;
+}
+
+.block-info h3,
+.reward-info h3,
+.fee-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.reward-info p,
+.fee-info p {
+    color: #666;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tip-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tip-section p {
+    color: #666;
+}
+
+.tip-section button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.tip-section button:hover {
+    background-color: #e6b800;
+}

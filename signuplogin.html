@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BentoSocial - Signup/Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signuplogin.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signuplogin.html">Signup/Login</a></li>
+                <li><a href="bentonews.html">News</a></li>
+                <li><a href="socialmessaging.html">Messaging</a></li>
+                <li><a href="bitcoinblockchain.html">Bitcoin Blockchain</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="signup-login-form">
+            <h2>Signup / Login</h2>
+            <form action="submit-form.php" method="post">
+                <div class="form-group">
+                    <label for="btc-address">BTC Address (Username)</label>
+                    <input type="text" id="btc-address" name="btc_address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

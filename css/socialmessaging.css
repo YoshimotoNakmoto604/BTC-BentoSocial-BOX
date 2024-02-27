@@ -1,0 +1,102 @@
+/* Social Messaging Styles */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-list {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-list h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.message-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.message-list li {
+    margin-bottom: 10px;
+}
+
+.message-list .username {
+    font-weight: bold;
+    color: #3CB371; /* Lime Green */
+}
+
+.message-input {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-input h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFD700; /* Static Yellow */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #FF6347; /* Rose Red */
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #008080; /* Teal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tip-section h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tip-section p {
+    color: #f0f0f0;
+}
+
+.tip-section button {
+    background-color: #FF4500; /* Orange Red */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.tip-section button:hover {
+    background-color: #FF6347; /* Rose Red */
+}

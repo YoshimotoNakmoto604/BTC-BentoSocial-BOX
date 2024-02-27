@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BentoSocial - Bitcoin Blockchain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bitcoinblockchain.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>BentoSocial</h1>
+            </div>
+            <div class="bitcoin-price">
+                <p>Current Bitcoin Price: <span id="bitcoin-price"></span></p>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signuplogin.html">Signup/Login</a></li>
+                <li><a href="bentonews.html">News</a></li>
+                <li><a href="socialmessaging.html">Messaging</a></li>
+                <li><a href="bitcoinblockchain.html">Bitcoin Blockchain</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="blockchain-data">
+        <h2>Bitcoin Blockchain Information</h2>
+        <div class="block-info">
+            <h3>Recent Blocks</h3>
+            <ul id="recent-blocks">
+                <!-- Display recent block data here -->
+            </ul>
+        </div>
+        <div class="reward-info">
+            <h3>Block Reward</h3>
+            <p id="block-reward">Loading...</p>
+        </div>
+        <div class="fee-info">
+            <h3>Transaction Fees</h3>
+            <p id="transaction-fees">Loading...</p>
+        </div>
+    </div>
+
+    <script>
+        // Fetch Bitcoin price from an API
+        fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('bitcoin-price').innerText = data.bpi.USD.rate;
+            });
+
+        // Fetch recent blocks, block reward, and transaction fees from a blockchain API
+        fetch('https://api.blockchain.info/blocks/latest')
+            .then(response => response.json())
+            .then(data => {
+                const blocks = data.blocks;
+                const recentBlocksList = document.getElementById('recent-blocks');
+                blocks.forEach(block => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Block Hash: ${block.hash}, Time: ${new Date(block.time * 1000)}`;
+                    recentBlocksList.appendChild(listItem);
+                });
+
+                document.getElementById('block-reward').innerText = `Block Reward: ${data.reward}`;
+                document.getElementById('transaction-fees').innerText = `Transaction Fees: ${data.fee}`;
+            });
+    </script>
+</body>
+</html>

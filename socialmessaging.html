@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BentoSocial - Messaging</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/socialmessaging.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signuplogin.html">Signup/Login</a></li>
+                <li><a href="bentonews.html">News</a></li>
+                <li><a href="socialmessaging.html">Messaging</a></li>
+                <li><a href="bitcoinblockchain.html">Bitcoin Blockchain</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="message-list">
+            <h2>Public Messages</h2>
+            <ul id="public-messages">
+                <!-- Display public messages here -->
+                <li><span class="username">User1:</span> Hi there!</li>
+                <li><span class="username">User2:</span> Welcome to BentoSocial!</li>
+            </ul>
+        </div>
+        <div class="message-input">
+            <h2>Send a Message</h2>
+            <form id="message-form">
+                <textarea id="message-text" placeholder="Type your message here"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <aside class="sidebar">
+        <div class="tip-section">
+            <h2>Tip for a Nice Message</h2>
+            <p>If you find a BTC address you want to send a dollar to for a nice message.</p>
+            <button id="send-dollar">Send $1</button>
+        </div>
+        <div class="tip-section">
+            <h2>Tip for Cheats</h2>
+            <p>If you find a BTC address being extra rude, you can tip $100 for cheats for your new game.</p>
+            <button id="send-100">Send $100</button>
+        </div>
+    </aside>
+
+    <script>
+        // JavaScript code for sending messages and tipping
+        document.getElementById('message-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const messageText = document.getElementById('message-text').value;
+            if (messageText.trim() !== '') {
+                const messageList = document.getElementById('public-messages');
+                const listItem = document.createElement('li');
+                listItem.textContent = `User1: ${messageText}`;
+                messageList.appendChild(listItem);
+                document.getElementById('message-text').value = ''; // Clear the input field
+            }
+        });
+
+        document.getElementById('send-dollar').addEventListener('click', function() {
+            alert('You sent $1 for a nice message.');
+            // Code to send $1 to the selected BTC address
+        });
+
+        document.getElementById('send-100').addEventListener('click', function() {
+            alert('You sent $100 for cheats.');
+            // Code to send $100 to the selected BTC address
+        });
+    </script>
+</body>
+</html>
+
